@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv75e8lo3tqxb"]
+
+[ext_resource type="Script" uid="uid://t3a15wqpeliy" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AddItemBtn" type="Button" parent="CanvasLayer"]
+offset_left = 442.0
+offset_top = 216.0
+offset_right = 778.0
+offset_bottom = 315.0
+text = "Add Item
+"
+
+[node name="GoFightBtn" type="Button" parent="CanvasLayer"]
+offset_left = 445.0
+offset_top = 379.0
+offset_right = 775.0
+offset_bottom = 472.0
+text = "Go Fight"
+
+[node name="ChangeSceneBtn" type="Button" parent="CanvasLayer"]
+offset_left = 446.0
+offset_top = 533.0
+offset_right = 787.0
+offset_bottom = 602.0
+
+[connection signal="pressed" from="CanvasLayer/AddItemBtn" to="." method="_on_add_item_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/GoFightBtn" to="." method="_on_go_fight_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/ChangeSceneBtn" to="." method="_on_change_scene_btn_pressed"]
